@@ -56,3 +56,30 @@ footer {
   margin: 40px 0 20px;
   color: #888;
 }
+/* Animation and Glow Effect */
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Section hover glow */
+section:hover {
+  box-shadow: 0 0 20px #00ffff60;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Smooth transition */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Heading glow */
+h1, h2 {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
