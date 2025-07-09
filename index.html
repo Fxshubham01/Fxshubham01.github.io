@@ -1,218 +1,58 @@
-<!DOCTYPE html><html lang="en"><head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FxShubham | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    :root {
-      --primary: #00ffff;
-      --accent: #ff004f;
-      --bg-dark: #0d0d0d;
-      --bg-light: #ffffff;
-    }body {
-  margin: 0;
-  padding: 0;
-  background: radial-gradient(circle at top left, #0d0d0d, #1a1a1a);
-  color: #ffffff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-size: 300% 300%;
-  animation: glitchShift 12s ease infinite;
-}
-
-@keyframes glitchShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-h1, h2 {
-  color: var(--primary);
-  text-shadow: 0 0 12px var(--primary), 0 0 24px var(--primary);
-}
-
-a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-}
-
-a:hover {
-  text-shadow: 0 0 8px var(--accent);
-}
-
-header {
-  text-align: center;
-  padding: 60px 20px 40px;
-  position: relative;
-}
-
-.profile-img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 4px solid var(--primary);
-  margin: 30px auto 20px;
-  display: block;
-  box-shadow: 0 0 20px var(--primary);
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.profile-img:hover {
-  transform: scale(1.05);
-}
-
-.theme-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: var(--accent);
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 25px;
-  cursor: pointer;
-}
-
-section {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 25px;
-  background-color: #1a1a1a;
-  border-radius: 18px;
-  box-shadow: 0 0 14px var(--primary);
-  animation: fadeInSection 1s ease forwards;
-  opacity: 0;
-}
-
-section:nth-child(even) {
-  animation-delay: 0.2s;
-}
-
-section:nth-child(odd) {
-  animation-delay: 0.4s;
-}
-
-@keyframes fadeInSection {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-section:hover {
-  box-shadow: 0 0 22px var(--primary);
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-ul li {
-  margin: 12px 0;
-}
-
-footer {
-  text-align: center;
-  margin: 50px 0 20px;
-  color: #888;
-  font-size: 14px;
-}
-
-.button-resume, .button-contact {
-  background: var(--accent);
-  color: #fff;
-  padding: 12px 22px;
-  border: none;
-  border-radius: 25px;
-  margin-top: 20px;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.button-resume:hover, .button-contact:hover {
-  background: #e6003a;
-  transform: scale(1.05);
-}
-
-@media screen and (max-width: 600px) {
-  .profile-img {
-    width: 100px;
-    height: 100px;
-  }
-
-  section {
-    margin: 15px;
-    padding: 15px;
-  }
-}
-
-  </style>
-</head><body>
+</head>
+<body>
   <header>
-    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
     <img src="InShot_20250709_150200806.jpg" alt="FxShubham" class="profile-img" />
     <h1>FxShubham</h1>
-    <p>I code. I trade. I execute in silence.</p>
-  </header>  <section>
+    <p>I code. I trade. I execute in silence. 📈 Discipline > Drama.</p>
+  </header>
+
+  <section>
     <h2>About Me</h2>
     <p>
       I'm Shubham, a self-taught coder and aspiring forex trader. I believe in
       building silently and letting results speak. Currently working on small
       web projects and learning the game — one line of code and one trade at a
-      time. Discipline > Drama. Focus > Noise.
+      time.
     </p>
-  </section>  <section>
+  </section>
+
+  <section>
     <h2>Projects</h2>
     <p>Coming Soon... 🛠️</p>
-    <a href="#" class="button-resume">Download Resume</a>
-  </section>  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:ftshubham01@gmail.com">ftshubham01@gmail.com</a></p>
-    <a href="https://t.me/FX_Shubham1" target="_blank" class="button-contact">DM on Telegram</a>
-  </section>  <section>
+  </section>
+
+  <section>
     <h2>Connect With Me</h2>
     <ul>
-    <<section>
-  <h2>Connect With Me</h2>
-  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 15px;">
-    <a href="https://x.com/shubhomblade1" target="_blank" title="X">
-      <img src="https://img.icons8.com/ios-filled/50/00ffff/twitterx.png" width="35" />
-    </a>
-    <a href="https://instagram.com/shubhom_x7" target="_blank" title="Instagram">
-      <img src="https://img.icons8.com/ios-filled/50/00ffff/instagram-new.png" width="35" />
-    </a>
-    <a href="https://t.me/FX_Shubham1" target="_blank" title="Telegram">
-      <img src="https://img.icons8.com/ios-filled/50/00ffff/telegram-app.png" width="35" />
-    </a>
-    <a href="https://reddit.com/u/FX_Shubham1" target="_blank" title="Reddit">
-      <img src="https://img.icons8.com/ios-filled/50/00ffff/reddit.png" width="35" />
-    </a>
-    <a href="https://www.quora.com/profile/Shubham-Yadav-3749-1" target="_blank" title="Quora">
-      <img src="https://img.icons8.com/ios-filled/50/00ffff/quora.png" width="35" />
-    </a>
-    <a href="https://tiktok.com/@shubhom_x7" target="_blank" title="TikTok">
-      <img src="https://img.icons8.com/ios-filled/50/00ffff/tiktok--v1.png" width="35" />
-    </a>
-  </div>
-</section>
-  </section>  <section>
+      <li><a href="https://x.com/shubhomblade1" target="_blank">X (Twitter)</a></li>
+      <li><a href="https://instagram.com/shubhom_x7" target="_blank">Instagram</a></li>
+      <li><a href="https://t.me/FX_Shubham1" target="_blank">Telegram</a></li>
+      <li><a href="https://reddit.com/u/FX_Shubham1" target="_blank">Reddit</a></li>
+      <li><a href="https://www.quora.com/profile/Shubham-Yadav-3749-1" target="_blank">Quora</a></li>
+      <li><a href="https://tiktok.com/@shubhom_x7" target="_blank">TikTok</a></li>
+      <li><a href="https://github.com/Fxshubham01" target="_blank">GitHub</a></li>
+    </ul>
+  </section>
+
+  <section>
     <h2>My Spotify Vibe</h2>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdbXrPNafg9d?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </section>  <footer>
+    <iframe style="border-radius:12px" 
+            src="https://open.spotify.com/embed/playlist/5p6gClixswnNXXK0iRCM66?utm_source=generator" 
+            width="100%" height="152" frameBorder="0" 
+            allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy"></iframe>
+  </section>
+
+  <footer>
     <p>&copy; 2025 FxShubham. Built with discipline.</p>
-  </footer>  <script>
-    function toggleTheme() {
-      const body = document.body;
-      const currentBg = body.style.background;
-      if (currentBg.includes('#ffffff')) {
-        body.style.background = 'radial-gradient(circle at top left, #0d0d0d, #1a1a1a)';
-        body.style.color = '#ffffff';
-      } else {
-        body.style.background = '#ffffff';
-        body.style.color = '#000000';
-      }
-    }
-  </script></body></html>
+  </footer>
+</body>
+</html>
