@@ -1,35 +1,108 @@
-/* Global Reset */
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
 
-{ margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  animation: fadeIn 1.2s ease-in-out;
+  padding: 10px;
+}
 
+h1, h2 {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  text-align: center;
+}
 
-body { background-color: #0d0d0d; color: #ffffff; font-family: 'Orbitron', sans-serif; line-height: 1.6; padding: 20px; animation: fadeIn 1.5s ease-in-out; }
+/* Profile Image */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 15px #00ffff80;
+  margin: 20px auto;
+  display: block;
+}
 
-header { text-align: center; padding: 40px 20px 20px; }
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 0px; /* No round corners */
+  box-shadow: 0 0 10px #00ffff20;
+}
 
-.profile-img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #00ffff; box-shadow: 0 0 15px #00ffff80; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto; }
+section:hover {
+  box-shadow: 0 0 25px #00ffff60;
+}
 
-h1 { color: #00ffff; text-shadow: 0 0 10px #00ffff; font-size: 2.5rem; margin-top: 10px; }
+/* Links */
+a {
+  color: #ff004f;
+  text-decoration: none;
+}
 
-.subtitle { font-size: 1.2rem; color: #aaa; margin-top: 5px; text-shadow: 0 0 5px #ff004f55; }
+a:hover {
+  text-shadow: 0 0 10px #ff004f;
+}
 
-section { max-width: 800px; margin: 40px auto; padding: 20px; background-color: #1a1a1a; border-radius: 15px; box-shadow: 0 0 10px #00ffff20; transition: all 0.4s ease-in-out; }
+/* Social Icons Row */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
 
-section:hover { box-shadow: 0 0 20px #00ffff60; }
+.social-icons a img {
+  width: 35px;
+  height: 35px;
+  filter: drop-shadow(0 0 5px #00ffff);
+}
 
-h2 { color: #00ffff; font-size: 1.8rem; margin-bottom: 15px; text-shadow: 0 0 7px #00ffff; }
+.social-icons a:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px #00ffff);
+}
 
-p { font-size: 1rem; color: #ccc; line-height: 1.7; }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 0;
+  color: #888;
+}
 
-.coming-soon { color: #ff004f; font-weight: bold; text-align: center; font-size: 1.3rem; }
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
 
-.social-icons { text-align: center; margin-top: 20px; }
+/* Responsive */
+@media (max-width: 600px) {
+  section {
+    padding: 15px;
+  }
 
-.social-icons a { color: #00ffff; padding: 15px; margin: 10px; border: 2px solid #00ffff; border-radius: 50%; box-shadow: 0 0 10px #00ffff80; transition: transform 0.3s ease, background-color 0.3s; display: inline-block; }
+  .profile-img {
+    width: 110px;
+    height: 110px;
+  }
 
-.social-icons a:hover { background-color: #00ffff; color: #0d0d0d; transform: scale(1.1); }
-
-footer { text-align: center; margin: 40px 0 20px; color: #888; font-size: 0.9rem; padding-top: 20px; border-top: 1px solid #333; }
-
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
+  .social-icons a img {
+    width: 28px;
+    height: 28px;
+  }
+}
