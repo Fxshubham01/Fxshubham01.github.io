@@ -2,152 +2,156 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FxShubham | Portfolio</title>
-  <link href="styles.css" rel="stylesheet">
+  <title>FX_Shubham | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    /* RESET */
+    * {
       margin: 0;
       padding: 0;
-      background-color: #0d0d0d;
-      color: #ffffff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }h1, h2 {
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
+      box-sizing: border-box;
+      transition: all 0.3s ease-in-out;
+    }body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #ffffff;
+  overflow-x: hidden;
 }
 
-a {
-  color: #ff004f;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(0,255,255,0.1) 20%, transparent 80%);
+  animation: pulse 6s infinite;
+  z-index: -1;
 }
 
-a:hover {
-  text-decoration: underline;
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 1; }
 }
 
-.nav__bar ul {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  background-color: #1a1a1a;
-  padding: 10px;
-  list-style-type: none;
-}
-
-.nav__links {
-  font-weight: bold;
-}
-
-.section__first {
+header {
   text-align: center;
-  padding: 80px 20px 40px;
+  padding: 60px 20px 30px;
 }
 
-.section__projects, .section__contact, .section__spotify {
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #00ffff;
+  box-shadow: 0 0 25px #00ffff99;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+p.subtitle {
+  font-size: 1.2rem;
+  color: #ff004f;
+  margin-top: 8px;
+}
+
+section {
   max-width: 800px;
   margin: 30px auto;
-  padding: 20px;
+  padding: 25px;
   background-color: #1a1a1a;
-  border-radius: 15px;
-  box-shadow: 0 0 10px #00ffff20;
-  transition: all 0.4s ease-in-out;
-}
-
-.projects__div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.projects__images {
-  width: 200px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #00ffff60;
-}
-
-.projects__p {
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00ffff33;
   text-align: center;
-  margin-top: 10px;
 }
 
-.projects__button {
+h2 {
+  color: #00ffff;
+  font-size: 1.8rem;
+  text-shadow: 0 0 10px #00ffff;
+  margin-bottom: 10px;
+}
+
+.coming-soon {
+  color: #00ffff;
+  font-size: 1.2rem;
+  animation: glowFade 1.5s ease-in-out infinite alternate;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
+
+@keyframes glowFade {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+.social-icons {
   margin-top: 20px;
-  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  color: #00ffff;
+  font-size: 1.6rem;
+  text-decoration: none;
+  border: 2px solid #00ffff;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ffff80;
+}
+
+.social-icons a:hover {
   background-color: #00ffff;
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+  color: #0d0d0d;
 }
 
-.contact__links a {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 15px;
-  border: 1px solid #00ffff;
-  border-radius: 5px;
-}
-
-iframe {
-  border: none;
-  border-radius: 12px;
-}
-
-.footer {
+footer {
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  color: #888;
+  padding: 30px;
+  color: #aaa;
+  font-size: 0.9rem;
 }
 
   </style>
 </head>
-<body>  <header>
-    <nav class="nav__bar" id="navbar">
-      <ul>
-        <li><a class="nav__links" href="#welcome-section">About</a></li>
-        <li><a class="nav__links" href="#projects">Work</a></li>
-        <li><a class="nav__links" href="#contact">Contact</a></li>
-      </ul>
-    </nav><section class="section__first" id="welcome-section">
-  <h1 class="section__h1">Hey, I'm FxShubham</h1>
-  <p class="section__p">Trader × Coder. Silence > Hype 💻📉</p>
-</section>
-
-  </header>  <main>
-    <section class="section__projects" id="projects">
-      <h2>These are some of my projects</h2>
-      <div class="projects__div">
-        <a href="https://fxshubham01.github.io/mycalculator" target="_blank" class="project-tile">
-          <img class="projects__images" src="https://cdn-icons-png.flaticon.com/512/2721/2721293.png">
-          <p class="projects__p">My Calculator</p>
-        </a>
-      </div>
-      <div class="div__button">
-        <button class="projects__button">Show all &nbsp;&nbsp;></button>
-      </div>
-    </section>
-  </main>  <section class="section__contact" id="contact">
-    <div class="contact__header">
-      <h2 class="contact__h2">Let's work together...</h2>
-      <p class="contact__p">How do you take your coffee?</p>
-    </div>
-    <div class="contact__links">
-      <a href="https://github.com/Fxshubham01" target="_blank">GitHub</a>
-      <a href="https://instagram.com/shubhom_x7" target="_blank">Instagram</a>
-      <a href="https://t.me/FX_Shubham1" target="_blank">Telegram</a>
+<body>
+  <header>
+    <img src="InShot_20250709_150200806.jpg" alt="FX_Shubham" class="profile-img">
+    <h1>FX_Shubham</h1>
+    <p class="subtitle">Still learning. Still growing. Still grinding.</p>
+  </header>  <section>
+    <h2>About Me</h2>
+    <p>Still learning. Still growing. Still grinding. I don’t have all the answers — but I ask the right questions. Currently diving deep into coding and forex trading — one line of code and one trade at a time. No noise. No shortcuts. Just raw discipline, silent execution, and long-term vision.</p>
+  </section>  <section>
+    <h2>Projects</h2>
+    <p class="coming-soon">🚧 Things are cooking in silence...<br>wait for the storm.</p>
+  </section>  <section>
+    <h2>Connect with Me</h2>
+    <div class="social-icons">
+      <a href="https://x.com/shubhomblade1" target="_blank">X</a>
+      <a href="https://instagram.com/shubhom_x7" target="_blank">IG</a>
+      <a href="https://t.me/FX_Shubham1" target="_blank">TG</a>
       <a href="https://reddit.com/u/FX_Shubham1" target="_blank">Reddit</a>
-      <a href="https://www.quora.com/profile/Shubham-Yadav-3749-1" target="_blank">Quora</a>
       <a href="https://tiktok.com/@shubhom_x7" target="_blank">TikTok</a>
-      <a href="mailto:ftshubham01@gmail.com">Send an Email</a>
+      <a href="https://github.com/Fxshubham01" target="_blank">GitHub</a>
+      <a href="https://www.quora.com/profile/Shubham-Yadav-3749-1" target="_blank">Quora</a>
+      <a href="https://open.spotify.com/playlist/5p6gClixswnNXXK0iRCM66?si=7RyBjWpjT1G-xJxSXIqIiA" target="_blank">Spotify</a>
     </div>
-  </section>  <section class="section__spotify">
-    <h2>My Spotify Vibe</h2>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5p6gClixswnNXXK0iRCM66?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </section>  <footer class="footer">
-    <p class="wrap inline">&copy; 2025 FxShubham. Built with discipline. All rights reserved.</p>
-  </footer></body>
+  </section>  <footer>
+    &copy; 2025 FX_Shubham. Built with discipline.
+  </footer>
+</body>
 </html>
